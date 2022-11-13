@@ -285,7 +285,7 @@ entity.Model.RushNew.Attachment.BlackTrail.Enabled = false
 entity.Model.RushNew.Attachment.BlackTrail2.Enabled = false
 entity.Model.RushNew.Attachment.ParticleEmitter.Enabled = false
 entity.Model.RushNew.Attachment.Dying.Enabled = true
-	ts:Create(entity.Model.RushNew,TweenInfo.new(3, "Quad", "InOut"),{CFrame = entity.Model.RushNew.CFrame - Vector3.new(0,12,0)}):Play()
+	ts:Create(entity.Model.RushNew,TweenInfo.new(3, "InOut", "Quad"),{CFrame = entity.Model.RushNew.CFrame - Vector3.new(0,12,0)}):Play()
 	                 entity.Model.PlaySound:Stop()
 			 wait(2)
 			 hi.StartBreak:Play()
