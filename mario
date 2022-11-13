@@ -294,7 +294,7 @@ ts:Create(entity.Model.RushNew,TweenInfo.new(0.3),{CFrame = entity.Model.RushNew
 			 hi.StartBreak:Play()
 			 wait(1)
 			 hi.BREAKSOUND:Play()
-			 hi:Destroy()
+			 hi.Handle:Destroy()
 			  hi.Broken:Destroy()
 			  hi.Brokenparticles.ParticleEmitter:Emit(10)
 	wait(2)
