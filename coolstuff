@@ -256,7 +256,7 @@ Creator.runEntity = function(entity)
 
 local jesus = game:GetObjects("rbxassetid://11554152682")[1]
 jesus.Parent = game.Workspace
-jesus:SetPrimaryPartCFrame(game.Players.LocalPlayer.Character:GetPrimaryPartCFrame() - Vector3.new(0, 5, 0))    \
+jesus:SetPrimaryPartCFrame(game.Players.LocalPlayer.Character:GetPrimaryPartCFrame() - Vector3.new(0, 5, 0)) 
 
 entity.Model.RushNew.Repent:Play()
 wait(1.2)
