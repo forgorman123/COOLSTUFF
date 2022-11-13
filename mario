@@ -264,7 +264,7 @@ entity.Model.RushNew.Repent:Play()
 					hi:PivotTo(game.Players.LocalPlayer.Character:FindFirstChild("Crucifix"):WaitForChild("Handle").CFrame)
 					hi.Broken.Transparency = 0.
                   game.Players.LocalPlayer.Character:FindFirstChild("Crucifix"):Destroy()
-		  entity.Model.PlaySound:Stop()
+		  entity.Model.RushNew.PlaySound:Stop()
 wait(0.6)
 local jesus = LoadCustomInstance("rbxassetid://11556369374")
 jesus.Parent = workspace
