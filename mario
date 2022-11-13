@@ -266,6 +266,7 @@ entity.Model.RushNew.Repent:Play()
                   game.Players.LocalPlayer.Character:FindFirstChild("Crucifix"):Destroy()
 		  entity.Model.RushNew.PlaySound:Stop()
 wait(0.6)
+ task.spawn(ModuleScripts.ModuleEvents.flickerLights, workspace.CurrentRooms[Plr:GetAttribute("CurrentRoom")], 12)
 local jesus = LoadCustomInstance("rbxassetid://11556369374")
 jesus.Parent = workspace
 
@@ -294,7 +295,7 @@ ts:Create(entity.Model.RushNew,TweenInfo.new(0.3),{CFrame = entity.Model.RushNew
 			 hi.StartBreak:Play()
 			 wait(1)
 			 hi.BREAKSOUND:Play()
-			 hi.Handle:Destroy()
+			 hi.Transparency = 1
 			  hi.Broken:Destroy()
 			  hi.Brokenparticles.ParticleEmitter:Emit(10)
 	wait(2)
