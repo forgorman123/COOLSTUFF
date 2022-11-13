@@ -258,7 +258,9 @@ local jesus = LoadCustomInstance("rbxassetid://11554411029")
 jesus.Parent = workspace
 jesus:SetPrimaryPartCFrame(entity.Model:GetPrimaryPartCFrame() - Vector3.new(0, 5, 0))
 for i, v in pairs(jesus:GetChildren()) do
-v:FindFirstChild("Beam").Attachment1 = entity.Model.RushNew.Attachment
+if v:FindFirstChild("Beam") then
+v.Beam.Attachment1 = entity.Model.RushNew.Attachment
+end
 end
 entity.Model.RushNew.Repent:Play()
 wait(1.2)
