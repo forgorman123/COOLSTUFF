@@ -255,11 +255,11 @@ entity.Model.RushNew.Repent:Play()
 
                         -- Repent
 	crucifixed = true		
-  					local hi = game.Players.LocalPlayer.Character:FindFirstChild("Crucifix").Handle:Clone()
-					hi.Anchored = true
-					hi.Parent = workspace
-					hi:PivotTo(game.Players.LocalPlayer.Character:FindFirstChild("Crucifix").Handle.CFrame)
-					hi.Parent.Broken.Transparency = 0.
+  					local hi = game.Players.LocalPlayer.Character:FindFirstChild("Crucifix"):Clone()
+					hi.Handle.Anchored = true
+					hi.Handle.Parent = workspace
+					hi.Handle:PivotTo(game.Players.LocalPlayer.Character:FindFirstChild("Crucifix").Handle.CFrame)
+					hi.Broken.Transparency = 0.
                   game.Players.LocalPlayer.Character:FindFirstChild("Crucifix"):Destroy()
 wait(0.6)
 local jesus = LoadCustomInstance("rbxassetid://11556369374")
@@ -285,12 +285,12 @@ entity.Model.RushNew.Attachment.Dying.Enabled = true
 	ts:Create(entity.Model.RushNew,TweenInfo.new(3, "Quad", "InOut"),{CFrame = entity.Model.RushNew.CFrame - Vector3.new(0,12,0)}):Play()
 	                 entity.Model.PlaySound:Stop()
 			 wait(2)
-			 hi.StartBreak:Play()
+			 hi.Handle.StartBreak:Play()
 			 wait(1)
-			 hi.BREAKSOUND:Play()
-			 hi:Destroy()
-			 hi.Parent.Broken:Destroy()
-			 hi.Parent.Brokenparticles.ParticleEmitter:Emit(10)
+			 hi.Handle.BREAKSOUND:Play()
+			 hi.Handle:Destroy()
+			  hi.Broken:Destroy()
+			  hi.Brokenparticles.ParticleEmitter:Emit(10)
 	wait(2)
 	jesus:Destroy()
                       entity.Model.PlaySound:Stop()
