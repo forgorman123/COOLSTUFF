@@ -251,9 +251,9 @@ Creator.runEntity = function(entity)
                     if Char:FindFirstChild("Crucifix") then
                         Connections[entity.Model].Movement:Disconnect()
                         entity.Model:SetAttribute("StopMovement", true)
-
+entity.Model.RushNew.Repent:Play()
                         -- Repent
-
+wait(0.5)
 local jesus = LoadCustomInstance("rbxassetid://11554904357")
 jesus.Parent = workspace
 jesus:SetPrimaryPartCFrame(entity.Model:GetPrimaryPartCFrame() - Vector3.new(0, 5, 0))
@@ -262,7 +262,7 @@ if v:FindFirstChild("Beam") then
 v:FindFirstChild("Beam").Attachment1 = entity.Model.RushNew.Attachment
 end
 end
-entity.Model.RushNew.Repent:Play()
+
 wait(1.2)
 ts = game:GetService("TweenService")
 entity.Model.RushNew.Scream:Play()
