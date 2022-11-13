@@ -252,10 +252,10 @@ Creator.runEntity = function(entity)
                         Connections[entity.Model].Movement:Disconnect()
                         entity.Model:SetAttribute("StopMovement", true)
 entity.Model.RushNew.Repent:Play()
-entity.Model.RushNew.Anchored = true
+
                         -- Repent
 	crucifixed = true		
-
+wait(0.9)
 local jesus = LoadCustomInstance("rbxassetid://11556369374")
 jesus.Parent = workspace
 jesus:SetPrimaryPartCFrame(entity.Model:GetPrimaryPartCFrame() - Vector3.new(0, 5, 0))
