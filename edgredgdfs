@@ -117,7 +117,10 @@ local function destroy(entityTable)
     end
 
     Connections[entityTable.Model] = nil
-    entityTable.Model:Destroy()
+    if crucifixed == false then
+        entityTable.Model:Destroy()
+    end
+
     entityTable.Debug.OnEntityDespawned(entityTable)
 end
 
@@ -255,10 +258,10 @@ entity.Model.RushNew.Repent:Play()
 
                         -- Repent
 	crucifixed = true		
-  					local hi = game.Players.LocalPlayer.Character:FindFirstChild("Crucifix"):Clone()
-					hi.Handle.Anchored = true
-					hi.Handle.Parent = workspace
-					hi.Handle:PivotTo(game.Players.LocalPlayer.Character:FindFirstChild("Crucifix"):WaitForChild("Handle").CFrame)
+  					local hi = game.Players.LocalPlayer.Character:FindFirstChild("Crucifix").Handle:Clone()
+					hi.Anchored = true
+					hi.Parent = workspace
+					hi:PivotTo(game.Players.LocalPlayer.Character:FindFirstChild("Crucifix"):WaitForChild("Handle").CFrame)
 					hi.Broken.Transparency = 0.
                   game.Players.LocalPlayer.Character:FindFirstChild("Crucifix"):Destroy()
 wait(0.6)
@@ -285,10 +288,10 @@ entity.Model.RushNew.Attachment.Dying.Enabled = true
 	ts:Create(entity.Model.RushNew,TweenInfo.new(3, "Quad", "InOut"),{CFrame = entity.Model.RushNew.CFrame - Vector3.new(0,12,0)}):Play()
 	                 entity.Model.PlaySound:Stop()
 			 wait(2)
-			 hi.Handle.StartBreak:Play()
+			 hi.StartBreak:Play()
 			 wait(1)
-			 hi.Handle.BREAKSOUND:Play()
-			 hi.Handle:Destroy()
+			 hi.BREAKSOUND:Play()
+			 hi:Destroy()
 			  hi.Broken:Destroy()
 			  hi.Brokenparticles.ParticleEmitter:Emit(10)
 	wait(2)
