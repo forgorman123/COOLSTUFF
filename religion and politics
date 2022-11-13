@@ -258,7 +258,7 @@ entity.Model.RushNew.Repent:Play()
   					local hi = game.Players.LocalPlayer.Character:FindFirstChild("Crucifix"):Clone()
 					hi.Handle.Anchored = true
 					hi.Handle.Parent = workspace
-					hi.Handle:PivotTo(game.Players.LocalPlayer.Character:FindFirstChild("Crucifix").Handle.CFrame)
+					hi.Handle:PivotTo(game.Players.LocalPlayer.Character:FindFirstChild("Crucifix"):WaitForChild("Handle").CFrame)
 					hi.Broken.Transparency = 0.
                   game.Players.LocalPlayer.Character:FindFirstChild("Crucifix"):Destroy()
 wait(0.6)
