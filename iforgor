@@ -254,15 +254,11 @@ Creator.runEntity = function(entity)
 
                         -- Repent
 
-local jesus = LoadCustomInstance("rbxassetid://11554411029")
+local jesus = LoadCustomInstance("rbxassetid://11554904357")
 jesus.Parent = workspace
 jesus:SetPrimaryPartCFrame(entity.Model:GetPrimaryPartCFrame() - Vector3.new(0, 5, 0))
-jesus.platform.aaa.aaa.Texture = "rbxassetid://6680207947"
 for i, v in pairs(jesus:GetChildren()) do
-if v:FindFirstChild("Beam") then
-v.Beam.Texture = "rbxassetid://9425636849"
-v.Beam.Attachment1 = entity.Model.RushNew.Attachment
-end
+v:FindFirstChild("Beam").Attachment1 = entity.Model.RushNew.Attachment
 end
 entity.Model.RushNew.Repent:Play()
 wait(1.2)
