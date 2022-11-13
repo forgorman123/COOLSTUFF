@@ -288,9 +288,9 @@ entity.Model.RushNew.Attachment.BlackTrail.Enabled = false
 entity.Model.RushNew.Attachment.BlackTrail2.Enabled = false
 entity.Model.RushNew.Attachment.ParticleEmitter.Enabled = false
 entity.Model.RushNew.Attachment.Dying.Enabled = true
-ts:Create(entity.Model.RushNew,TweenInfo.new(1,Enum.EasingStyle.Quad, Enum.EasingDirection.InOut),{CFrame = entity.Model.RushNew.CFrame + Vector3.new(0,6,0)}):Play()
-wait(1)
-	ts:Create(entity.Model.RushNew,TweenInfo.new(3,Enum.EasingStyle.Quad, Enum.EasingDirection.InOut),{CFrame = entity.Model.RushNew.CFrame - Vector3.new(0,14,0)}):Play()
+ts:Create(entity.Model.RushNew,TweenInfo.new(0.4,Enum.EasingStyle.Quad, Enum.EasingDirection.InOut),{CFrame = entity.Model.RushNew.CFrame + Vector3.new(0,6,0)}):Play()
+wait(0.4)
+	ts:Create(entity.Model.RushNew,TweenInfo.new(3,Enum.EasingStyle.Quad, Enum.EasingDirection.InOut),{CFrame = entity.Model.RushNew.CFrame - Vector3.new(0,26,0)}):Play()
 	                 
 			 wait(7)
 			 hi.StartBreak:Play()
