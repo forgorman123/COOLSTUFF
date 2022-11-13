@@ -1,5 +1,5 @@
 -- Services
-local crucifixed = false
+
 local Players = game:GetService("Players")
 local RS = game:GetService("RunService")
 local ReSt = game:GetService("ReplicatedStorage")
@@ -117,10 +117,7 @@ local function destroy(entityTable)
     end
 
     Connections[entityTable.Model] = nil
-    if crucifixed = false then
-     
     entityTable.Model:Destroy()
-end
     entityTable.Debug.OnEntityDespawned(entityTable)
 end
 
@@ -256,6 +253,7 @@ Creator.runEntity = function(entity)
                         entity.Model:SetAttribute("StopMovement", true)
 entity.Model.RushNew.Repent:Play()
                         -- Repent
+	crucifixed = true		
 
 local jesus = LoadCustomInstance("rbxassetid://11556369374")
 jesus.Parent = workspace
@@ -265,14 +263,11 @@ if v:FindFirstChild("Beam") then
 v:FindFirstChild("Beam").Attachment1 = entity.Model.RushNew.Attachment
 end
 end
-
 for i = 1,6,1 do
 for i, v in pairs(jesus.platform["High-Poly Cylinder"]:GetChildren()) do
-task.wait(0.01)
 v.Transparency = v.Transparency + 0.1
 end
 end
-
 wait(1.2)
 ts = game:GetService("TweenService")
 entity.Model.RushNew.Scream:Play()
