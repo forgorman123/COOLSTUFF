@@ -267,7 +267,7 @@ entity.Model.RushNew.Repent:Play()
 		  entity.Model.RushNew.PlaySound:Stop()
 wait(0.6)
  task.spawn(ModuleScripts.ModuleEvents.flickerLights, workspace.CurrentRooms[Plr:GetAttribute("CurrentRoom")], 9)
-local jesus = LoadCustomInstance("rbxassetid://11556369374")
+local jesus = LoadCustomInstance("rbxassetid://11556500858")
 jesus.Parent = workspace
 
 jesus:SetPrimaryPartCFrame(entity.Model:GetPrimaryPartCFrame() - Vector3.new(0, 5, 0))
