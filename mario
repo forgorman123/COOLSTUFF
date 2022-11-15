@@ -276,11 +276,7 @@ if v:FindFirstChild("Beam") then
 v:FindFirstChild("Beam").Attachment1 = entity.Model.RushNew.Attachment
 end
 end
-for i = 1,6,1 do
-for i, v in pairs(jesus.platform["High-Poly Cylinder"]:GetChildren()) do
-v.Transparency = v.Transparency + 0.1
-end
-end
+
 wait(1.2)
 ts = game:GetService("TweenService")
 entity.Model.RushNew.Scream:Play()
