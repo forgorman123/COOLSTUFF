@@ -282,8 +282,6 @@ ts = game:GetService("TweenService")
 entity.Model.RushNew.Scream:Play()
 entity.Model.RushNew.Attachment.BlackTrail.Enabled = false
 entity.Model.RushNew.Attachment.BlackTrail2.Enabled = false
-entity.Model.RushNew.Attachment.ParticleEmitter.Enabled = false
-entity.Model.RushNew.Attachment.Dying.Enabled = true
 ts:Create(entity.Model.RushNew,TweenInfo.new(0.4,Enum.EasingStyle.Quad, Enum.EasingDirection.InOut),{CFrame = entity.Model.RushNew.CFrame + Vector3.new(0,6,0)}):Play()
 wait(0.4)
 	ts:Create(entity.Model.RushNew,TweenInfo.new(3,Enum.EasingStyle.Quad, Enum.EasingDirection.InOut),{CFrame = entity.Model.RushNew.CFrame - Vector3.new(0,26,0)}):Play()
@@ -296,7 +294,7 @@ wait(0.4)
 			  hi.Broken:Destroy()
 			  hi.Brokenparticles.ParticleEmitter:Emit(10)
 	jesus:Destroy()
-                      entity.Model.PlaySound:Stop()
+                          destroy(entity)
 
                         return
                     end
