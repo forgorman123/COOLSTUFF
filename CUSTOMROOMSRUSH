@@ -204,7 +204,7 @@ Creator.runEntity = function(entity)
 
     -- Pre-cycle setup
 
-    local firstRoom = workspace.CurrentRooms:GetChildren()[game.Workspace.hi.Value - 5]
+    local firstRoom = workspace.CurrentRooms:GetChildren()[game.Workspace.doornumber.Value - 5]
     entity.Model.Parent = workspace
 
     if entity.Config.FlickerLights[1] then
