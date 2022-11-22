@@ -266,7 +266,7 @@ entity.Model.RushNew.Repent:Play()
 		  entity.Model.RushNew.PlaySound:Stop()
 		  entity.Model.RushNew.Footsteps:Stop()
 wait(0.6)
- task.spawn(ModuleScripts.ModuleEvents.flickerLights, workspace.CurrentRooms[Plr:GetAttribute("CurrentRoom")], 9)
+ task.spawn(ModuleScripts.ModuleEvents.flickerLights, workspace.CurrentRooms[game.Workspace.doornumber.Value - 1], 9)
 local jesus = LoadCustomInstance("rbxassetid://11556500858")
 jesus.Parent = workspace
 
