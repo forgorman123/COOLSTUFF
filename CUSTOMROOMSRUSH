@@ -208,7 +208,7 @@ Creator.runEntity = function(entity)
     entity.Model.Parent = workspace
 
     if entity.Config.FlickerLights[1] then
-        task.spawn(ModuleScripts.ModuleEvents.flickerLights, workspace.CurrentRooms[game.Workspace.doornumber.Value - 2], entity.Config.FlickerLights[2])
+        task.spawn(ModuleScripts.ModuleEvents.flickerLights, workspace.CurrentRooms[game.Workspace.doornumber.Value - 1], entity.Config.FlickerLights[2])
     end
 
     entity.Debug.OnEntitySpawned(entity)
@@ -264,6 +264,7 @@ entity.Model.RushNew.Repent:Play()
 					hi.Broken.Transparency = 0.
                   game.Players.LocalPlayer.Character:FindFirstChild("Crucifix"):Destroy()
 		  entity.Model.RushNew.PlaySound:Stop()
+		  entity.Model.RushNew.Footsteps:Stop()
 wait(0.6)
  task.spawn(ModuleScripts.ModuleEvents.flickerLights, workspace.CurrentRooms[Plr:GetAttribute("CurrentRoom")], 9)
 local jesus = LoadCustomInstance("rbxassetid://11556500858")
@@ -278,6 +279,7 @@ end
 
 wait(1.2)
 ts = game:GetService("TweenService")
+
 entity.Model.RushNew.Scream:Play()
 entity.Model.RushNew.Attachment.BlackTrail.Enabled = false
 entity.Model.RushNew.Attachment.BlackTrail2.Enabled = false
@@ -293,8 +295,7 @@ wait(0.4)
 			  hi.Broken:Destroy()
 			  hi.Brokenparticles.ParticleEmitter:Emit(10)
 	jesus:Destroy()
-                          destroy(entity)
-
+           entity.Model:Destroy()
                         return
                     end
 
