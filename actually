@@ -16,7 +16,7 @@ local SelfModules = {
 }
 
 local Assets = {
-    Door = LoadCustomInstance("rbxassetid://11774126261"),
+    Door = LoadCustomInstance("rbxassetid://11774170363"),
 }
 
 local DoorReplication = {}
