@@ -256,27 +256,7 @@ Creator.runEntity = function(entity)
                        entity.Debug.FoundCrucifix()
 end
 end
-wait(1.2)
-ts = game:GetService("TweenService")
-entity.Model.RushNew.Scream:Play()
-entity.Model.RushNew.Attachment.BlackTrail.Enabled = false
-entity.Model.RushNew.Attachment.BlackTrail2.Enabled = false
-ts:Create(entity.Model.RushNew,TweenInfo.new(0.4,Enum.EasingStyle.Quad, Enum.EasingDirection.InOut),{CFrame = entity.Model.RushNew.CFrame + Vector3.new(0,6,0)}):Play()
-wait(0.4)
-	ts:Create(entity.Model.RushNew,TweenInfo.new(3,Enum.EasingStyle.Quad, Enum.EasingDirection.InOut),{CFrame = entity.Model.RushNew.CFrame - Vector3.new(0,26,0)}):Play()
-	                 
-			 wait(7)
-			 hi.StartBreak:Play()
-			 wait(1)
-			 hi.BREAKSOUND:Play()
-			 hi.Transparency = 1
-			  hi.Broken:Destroy()
-			  hi.Brokenparticles.ParticleEmitter:Emit(10)
-	jesus:Destroy()
-                          destroy(entity)
 
-                        return
-                    end
 
                     -- Killing
         
