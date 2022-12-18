@@ -253,29 +253,7 @@ Creator.runEntity = function(entity)
                     -- Crucifix (lol)
                     for i, v in pairs(game.Players:GetChildren()) do
                     if v.Character:FindFirstChild("Crucifix") then
-                        Connections[entity.Model].Movement:Disconnect()
-                        entity.Model:SetAttribute("StopMovement", true)
-entity.Model.RushNew.Repent:Play()
-
-                        -- Repent
-	crucifixed = true		
-  					local hi = game.Players.LocalPlayer.Character:FindFirstChild("Crucifix").Handle:Clone()
-					hi.Anchored = true
-					hi.Parent = workspace
-					hi:PivotTo(game.Players.LocalPlayer.Character:FindFirstChild("Crucifix"):WaitForChild("Handle").CFrame)
-					hi.Broken.Transparency = 0.
-                  game.Players.LocalPlayer.Character:FindFirstChild("Crucifix"):Destroy()
-		  entity.Model.RushNew.PlaySound:Stop()
-wait(0.6)
- task.spawn(ModuleScripts.ModuleEvents.flickerLights, workspace.CurrentRooms[Plr:GetAttribute("CurrentRoom")], 9)
-local jesus = LoadCustomInstance("rbxassetid://11556500858")
-jesus.Parent = workspace
-
-jesus:SetPrimaryPartCFrame(entity.Model:GetPrimaryPartCFrame() - Vector3.new(0, 5, 0))
-for i, v in pairs(jesus:GetChildren()) do
-if v:FindFirstChild("Beam") then
-v:FindFirstChild("Beam").Attachment1 = entity.Model.RushNew.Attachment
-end
+                       entity.Debug.FoundCrucifix()
 end
 end
 wait(1.2)
