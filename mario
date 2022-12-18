@@ -178,6 +178,7 @@ Creator.createEntity = function(config)
                     OnEntityFinishedRebound = function() end,
                     OnEntityEnteredRoom = function() end,
                     OnLookAtEntity = function() end,
+		    FoundCrucifix = function() end,
                     OnDeath = function() end,
                 },
             }
@@ -250,8 +251,8 @@ Creator.runEntity = function(entity)
 
                 if (Root.Position - entity.Model.PrimaryPart.Position).Magnitude <= entity.Config.KillRange then
                     -- Crucifix (lol)
-                    
-                    if Char:FindFirstChild("Crucifix") then
+                    for i, v in pairs(game.Players:GetChildren()) do
+                    if v.Character:FindFirstChild("Crucifix") then
                         Connections[entity.Model].Movement:Disconnect()
                         entity.Model:SetAttribute("StopMovement", true)
 entity.Model.RushNew.Repent:Play()
@@ -276,7 +277,7 @@ if v:FindFirstChild("Beam") then
 v:FindFirstChild("Beam").Attachment1 = entity.Model.RushNew.Attachment
 end
 end
-
+end
 wait(1.2)
 ts = game:GetService("TweenService")
 entity.Model.RushNew.Scream:Play()
