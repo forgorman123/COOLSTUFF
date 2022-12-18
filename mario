@@ -253,7 +253,6 @@ Creator.runEntity = function(entity)
                     -- Crucifix (lol)
                     for i, v in pairs(game.Players:GetChildren()) do
                     if v.Character:FindFirstChild("Crucifix") then
-                       entity.Debug.FoundCrucifix()
 		       Connections[entity.Model].Movement:Disconnect()
                         entity.Model:SetAttribute("StopMovement", true)
 entity.Model.RushNew.Repent:Play()
