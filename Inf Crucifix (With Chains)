@@ -4,7 +4,7 @@ local ee = Instance.new("Weld", fake)
 game:GetService("RunService").Heartbeat:Connect(function()
 	fake:SetPrimaryPartCFrame(game.Players.LocalPlayer.Character.RightHand.CFrame)
 ee.Part0 = fake.RightHand
-ee.Part1 = game.Players.LocalPlayer.Character.RightHand.CFrame
+ee.Part1 = game.Players.LocalPlayer.Character.RightHand
 	if game.Players.LocalPlayer.Character:FindFirstChild("Crucifix") then
 
 if game.Players.LocalPlayer.Character.Crucifix:FindFirstChild("Handle") then
