@@ -1,0 +1,197 @@
+local fake = game:GetObjects("rbxassetid://12956672682")[1]
+fake.Parent = workspace
+local ee = Instance.new("Weld", fake)
+game:GetService("RunService").Heartbeat:Connect(function()
+	fake:SetPrimaryPartCFrame(game.Players.LocalPlayer.Character.RightHand.CFrame)
+ee.Part0 = fake.RightHand
+ee.Part1 = game.Players.LocalPlayer.Character.RightHand.CFrame
+	if game.Players.LocalPlayer.Character:FindFirstChild("Crucifix") then
+
+if game.Players.LocalPlayer.Character.Crucifix:FindFirstChild("Handle") then
+game.Players.LocalPlayer.Character.Crucifix.Handle:Destroy()
+print("your crucifix is now infinite :))))))")
+end
+if not game.Players.LocalPlayer.Character.Crucifix:FindFirstChild("Handle") then
+fake.Handle.Transparency = 0
+else
+	fake.Handle.Transparency = 1
+end
+else
+	fake.Handle.Transparency = 1
+	end
+end)
+
+
+print("mogusing")
+if not game.Workspace:FindFirstChild("alreadyexecuted5") then
+Instance.new("Frame", workspace).Name = "alreadyexecuted5"
+game.Workspace.ChildAdded:Connect(function(entity)
+wait(1)
+if entity.Name ~= "CrucifiedRush" then
+	if entity:FindFirstChild("RushNew") or entity:FindFirstChild("AmbushNew") or entity:FindFirstChild("Main") then
+		if game.Players.LocalPlayer.Character:FindFirstChild("Crucifix") then
+			if not game.Players.LocalPlayer.Character.Crucifix:FindFirstChild("Handle") then
+	repeat
+		wait()
+	until (entity:FindFirstChildOfClass("Part").Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude < 15 
+		local rush2 = entity:Clone()		
+		rush2.Name = "CrucifiedRush"
+		rush2.Parent = workspace
+	local rush = rush2:FindFirstChildOfClass("Part")
+		rush.CFrame = entity:FindFirstChildOfClass("Part").CFrame
+		entity:Destroy()
+	
+		for i, v in pairs(rush:GetChildren()) do
+			if v:IsA("Sound") then
+v:Stop()
+			end
+		end
+		if rush:FindFirstChild("Repent") then
+		rush.Repent:Play()
+		end
+		local highlightedxd = game:GetObjects("rbxassetid://12954565339")[1]
+		highlightedxd.Parent = workspace
+		highlightedxd:SetPrimaryPartCFrame(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame)
+local sound = Instance.new("Sound", workspace)
+sound.SoundId = "rbxassetid://6555668806"
+sound:Play()
+
+local intensity = Instance.new("NumberValue")
+intensity.Value = 0
+
+local intensity2= Instance.new("NumberValue")
+intensity2.Value = 0.02
+		game.TweenService:Create(highlightedxd.CrucifixTravel, TweenInfo.new(1, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {Position = highlightedxd.CrucifixTravel2.Position}):Play()
+		local funny = game:GetObjects("rbxassetid://12954554750")[1]
+		funny.Parent = workspace
+		funny:SetPrimaryPartCFrame(rush.CFrame + Vector3.new(0, -3, 0) )		
+		game:GetService("RunService").Stepped:Connect(function()
+		rush.CFrame = funny.Part.CFrame
+			funny.Crucifixritual.Outer.CFrame = funny.Crucifixritual.Outer.CFrame * CFrame.new(0, 0, 0) * CFrame.fromEulerAnglesXYZ(0, intensity2.Value, 0) --mess around with these numbers if you want
+	funny.Crucifixritual.SpookyStuff.CFrame = funny.Crucifixritual.SpookyStuff.CFrame * CFrame.new(0, 0, 0) * CFrame.fromEulerAnglesXYZ(0, -intensity2.Value, 0) --mess around with these numbers if you want
+
+		funny.Part.Transparency = 1
+	highlightedxd.CrucifixTravel.CFrame = highlightedxd.CrucifixTravel.CFrame * CFrame.new(0, 0, 0) * CFrame.fromEulerAnglesXYZ(0, intensity.Value, 0) --mess around with these numbers if you want
+wait()-- kind of the speed it moves/spins at but i recomend not putting it higher then one if you put nothing it will do 0.001                                             --^   
+end )
+		for i , v in pairs(funny.Crucifixritual.Chains:GetChildren()) do
+				v.Beam.Attachment1 = funny.Part.Attachment
+		end
+		
+		wait(0.3)
+		local e = game.TweenService:Create(intensity, TweenInfo.new(3.5,Enum.EasingStyle.Quad, Enum.EasingDirection.In), {Value = 0.5})
+e:Play()
+		for i, v in pairs(funny.Spawnthing:GetChildren()) do
+			local newtween = game:GetService("TweenService"):Create(v, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.In), {Transparency = 1})
+			newtween:Play()
+		end
+		wait(2.7)	
+		e:Cancel()
+
+
+		local part = funny.Part
+game.TweenService:Create(part,TweenInfo.new(0.6,Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {CFrame = part.CFrame + Vector3.new(0,4,0)}):Play()
+wait(0.7)
+game.TweenService:Create(part,TweenInfo.new(1.2,Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {CFrame = part.CFrame + Vector3.new(0,-25,0)}):Play()
+wait(0.3)
+game.TweenService:Create(funny.Crucifixritual.Outer.PointLight,TweenInfo.new(0.8,Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {Range = 40}):Play()
+game.TweenService:Create(funny.Crucifixritual.Outer.PointLight,TweenInfo.new(1,Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {Brightness = 2}):Play()
+for i, v in pairs(funny.Crucifixritual.Chains:GetDescendants()) do
+	if v:IsA("Beam") then
+		local val = Instance.new("NumberValue")
+		game.TweenService:Create(val, TweenInfo.new(0.5), {Value = 1}):Play()
+		val.Changed:Connect(function()
+			v.Transparency = NumberSequence.new{
+				NumberSequenceKeypoint.new(0, val.Value),
+						NumberSequenceKeypoint.new(0.599, val.Value),
+						NumberSequenceKeypoint.new(0.755, 1),
+				NumberSequenceKeypoint.new(1,1)
+			}
+
+		end)
+
+	end
+end
+
+wait(0.8)
+	
+local e3 = game.TweenService:Create(intensity, TweenInfo.new(2,Enum.EasingStyle.Quad, Enum.EasingDirection.In), {Value = 0})
+e3:Play()
+for i, v in pairs(funny.Crucifixritual.Outer:GetChildren()) do
+	if v:IsA("Beam") then
+		local val = Instance.new("NumberValue")
+		game.TweenService:Create(val, TweenInfo.new(0.8), {Value = 1}):Play()
+		val.Changed:Connect(function()
+			v.Transparency = NumberSequence.new{
+				NumberSequenceKeypoint.new(0, val.Value),
+				NumberSequenceKeypoint.new(0.5, val.Value),
+				NumberSequenceKeypoint.new(1,1)
+			}
+
+		end)
+	end
+end
+wait(0.4)
+game.TweenService:Create(funny.Crucifixritual.Outer.PointLight,TweenInfo.new(0.8,Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {Range = 9}):Play()
+game.TweenService:Create(funny.Crucifixritual.Outer.PointLight,TweenInfo.new(0.6,Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {Brightness = 0.3}):Play()
+wait(0.4)
+for i, v in pairs(funny.Crucifixritual.SpookyStuff:GetChildren()) do
+	if v:IsA("Beam") then
+		local val = Instance.new("NumberValue")
+		game.TweenService:Create(val, TweenInfo.new(0.8), {Value = 1}):Play()
+		val.Changed:Connect(function()
+			v.Transparency = NumberSequence.new{
+				NumberSequenceKeypoint.new(0, val.Value),
+				NumberSequenceKeypoint.new(0.5, val.Value),
+				NumberSequenceKeypoint.new(1,1)
+			}
+
+		end)
+	end
+end
+wait(0.8)
+for i, v in pairs(funny.Crucifixritual.Inner:GetChildren()) do
+	if v:IsA("Beam") then
+		local val = Instance.new("NumberValue")
+		game.TweenService:Create(val, TweenInfo.new(0.8), {Value = 1}):Play()
+		val.Changed:Connect(function()
+			v.Transparency = NumberSequence.new{
+				NumberSequenceKeypoint.new(0, val.Value),
+				NumberSequenceKeypoint.new(0.5, val.Value),
+				NumberSequenceKeypoint.new(1,1)
+			}
+
+		end)
+	end
+end
+wait(0.8)		
+local e2 = game.TweenService:Create(highlightedxd.CrucifixTravel, TweenInfo.new(1,Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = Vector3.new(0.476, 4.45, 3.605), Transparency = 1})
+e2:Play()
+
+for i, v in pairs(funny.Crucifixritual.Moon:GetChildren()) do
+	if v:IsA("Beam") then
+		local val = Instance.new("NumberValue")
+		game.TweenService:Create(val, TweenInfo.new(0.8), {Value = 1}):Play()
+		val.Changed:Connect(function()
+			v.Transparency = NumberSequence.new{
+				NumberSequenceKeypoint.new(0, val.Value),
+				NumberSequenceKeypoint.new(0.5, val.Value),
+				NumberSequenceKeypoint.new(1,1)
+			}
+
+		end)
+	end
+end
+wait(2)
+		funny:Destroy()
+sound:Destroy()
+rush2:Destroy()
+highlightedxd:Destroy()
+end
+end
+end
+end
+end)
+else
+	error("No")
+end
