@@ -1,3 +1,4 @@
+print("script loaded")
 local fake = game:GetObjects("rbxassetid://12956672682")[1]
 fake.Parent = workspace
 local ee = Instance.new("Weld", fake)
